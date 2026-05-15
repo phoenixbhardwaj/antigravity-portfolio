@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+// @ts-ignore
 import gsap from 'gsap';
 import styles from './Cursor.module.css';
 
