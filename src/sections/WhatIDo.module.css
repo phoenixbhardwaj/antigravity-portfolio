@@ -1,0 +1,37 @@
+.whatIDoSection {
+  padding: 10rem 2rem;
+  min-height: 80vh;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
+  transition: padding-left 0.5s ease;
+  cursor: none;
+}
+
+.title {
+  color: #333;
+  transition: color 0.5s ease, transform 0.5s ease;
+  transform-origin: left center;
+}
+
+.active {
+  color: var(--text-color);
+  transform: translateX(2rem);
+}
+
+@media (max-width: 768px) {
+  .item {
+    padding-bottom: 1rem;
+  }
+  .active {
+    transform: translateX(1rem);
+  }
+}

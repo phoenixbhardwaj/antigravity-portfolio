@@ -1,0 +1,59 @@
+.historySection {
+  padding: 10rem 2rem;
+  min-height: 50vh;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+}
+
+.historyItem {
+  display: flex;
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+  cursor: none;
+}
+
+.historyItem:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.yearCol {
+  flex: 0 0 30%;
+}
+
+.contentCol {
+  flex: 1;
+}
+
+.duration {
+  font-family: var(--font-sans);
+  color: #888;
+  font-size: 1.25rem;
+}
+
+.role {
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.company {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .historyItem {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+}

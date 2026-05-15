@@ -1,0 +1,66 @@
+.cursorContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10001;
+  /* Hardware acceleration for smoothest possible movement */
+  will-change: transform;
+}
+
+.cursorInner {
+  position: relative;
+  /* Center the inner circle around the container's top-left origin */
+  top: -16px;
+  left: -16px;
+  width: 32px;
+  height: 32px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  mix-blend-mode: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Transition EVERYTHING except transform (which is handled by container) */
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, mix-blend-mode 0.3s ease, top 0.3s ease, left 0.3s ease, transform 0.3s ease;
+}
+
+.hovering {
+  transform: scale(3);
+  background-color: rgba(238, 91, 50, 0.15); /* Transparent accent color */
+  border: 1px solid rgba(238, 91, 50, 0.4);
+  backdrop-filter: blur(2px); /* Glassmorphism pop */
+  mix-blend-mode: normal;
+}
+
+.hasText {
+  transform: scale(1);
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: var(--accent-color);
+  mix-blend-mode: normal;
+}
+
+.cursorText {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hasText .cursorText {
+  opacity: 1;
+}
+
+/* Hide on smaller screens */
+@media (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+}
