@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Projects.module.css';
+// @ts-ignore
 import { ArrowUpRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
