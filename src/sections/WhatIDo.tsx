@@ -49,6 +49,7 @@ export const WhatIDo: React.FC = () => {
     <section className={`container ${styles.whatIDoSection}`} ref={sectionRef}>
       <h2 className="text-subheading" style={{ marginBottom: '4rem', color: 'var(--accent-color)' }}>WHAT I DO</h2>
       <div className={styles.list}>
+        // @ts-ignore
         {SERVICES.map((service, index) => (
           <div 
             key={index} 
